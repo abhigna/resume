@@ -1,0 +1,210 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[11pt,letterpaper,hidelinks]{article}
+\usepackage[letterpaper,margin=0.2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{savetrees}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{marvosym}
+
+\newcommand{\changeurlcolor}[1]{\hypersetup{urlcolor=#1}}      
+
+\pagestyle{fancy}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% The actual content starts here   %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Abhigna Nagaraja}}
+
+%2030 8th Ave\ \ \textbullet \ \ Apt \#\ 601\ \ \textbullet \ \ Seattle, WA - 98121
+%\\
+\vspace{0pt}
+\small \raisebox{-0.25ex}\Email\ \href{mailto:abhigna.n4@gmail.com}{abhigna.n4@gmail.com}
+\ \textbullet\ \small \raisebox{-0.25ex}{\includegraphics[width=2.5ex]{LinkedIn-InBug-2C.jpeg}} \href{https:// www.linkedin.com/in/abhigna-nagaraja}{linkedin.com/in/abhigna-nagaraja}
+\ \textbullet\ \small \raisebox{-0.25ex}{\includegraphics[width=2.5ex]{Octocat.jpeg}}\href{https://github.com/abhigna}{github.com/abhigna} 
+\ \textbullet\ \small  \href{tel:+14013262244}{(401)326-2244}
+\ \textbullet\ \small \href{https://www.google.com/maps/place/2030+8th+Ave,+Seattle,+WA+98121/@47.6163601,-122.3377015,17z/data=!4m13!1m7!3m6!1s0x5490154a3fbfbf7d:0x3619724823564dfb!2s2030+8th+Ave,+Seattle,+WA+98121!3b1!8m2!3d47.6165102!4d-122.3374152!3m4!1s0x5490154a3fbfbf7d:0x3619724823564dfb!8m2!3d47.6165102!4d-122.3374152}{2030 8th Ave, Apt 601, Seattle, WA}
+
+\vspace{-6pt}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%---OBJECTIVE---%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection*{\uppercase{Objective}}
+%\vspace{-1pt}
+%\begin{itemize}
+%\item[] Seeking a software engineering \emph{internship} with the data %science or data engineering team in a company that will allow me to %use my skills in machine learning, big data systems, and %recommendation engines.
+%\end{itemize}
+%\vspace{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%---EXPERIENCE SECTION---%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+\subsection*{\uppercase{Relevant Experience}}
+\vspace{-3pt}
+\begin{itemize}
+	\parskip=0.1em
+        \item
+	\headerrow
+		{\textbf{Meta Platforms, Inc}}
+		{\emph{Seattle, US}}
+    \\
+    \headerrow
+		{\emph{Staff Software Engineer , Meta Platforms Inc}}
+		{\emph{Oct 2021 -- Present}}
+	 	\begin{itemize*}
+\item Led the effort to improve the operational efficiency of the Async Tier, a large-scale serverless computing platform handling trillions in traffic volume daily.
+\item Re-architected and migrated the Async Tier to a new system, resulting in significant enhancements in reliability, scalability, and efficiency.
+\item Reduced operational events, accelerated development of newer capacities, and achieved substantial server savings due to the enhanced efficiency of the newer components.
+\item Empowered thousands of engineers within Meta to build business applications at scale with improved efficiency, directly translating to Meta's ability to deliver products quickly and at a lower cost to billions of users.
+\item Positively impacted the reliability of features in Meta products such as WhatsApp, Instagram, Facebook, and Thread.
+\item Co-authored the research paper "XFaaS: Hyperscale and Low Cost Serverless Functions," shedding light on the intricacies of serverless computing within hyperscale environments and contributing valuable insights to the field of cloud computing.
+		\end{itemize*}
+    \
+        \item
+	\headerrow
+		{\textbf{Amazon Web Services}}
+		{\emph{Seattle, US}}
+    \\
+    \headerrow
+		{\emph{Sr Software Engineer , Amazon API Gateway}}
+		{\emph{April 2019 -- September 2021}}
+	 	\begin{itemize*}
+	    \item Lead engineering for one of the highest traffic volume AWS service - Amazon API Gateway - a highly configurable reverse proxy with tight integration with many AWS services.
+	 	\item Guide API Gateway's architectural vision on scalability, availability and operational posture. Sponsored a cross team re-architectural effort to build a scalable shuffle sharded data plane.
+	 	\item Represent API Gateway's engineering in broader AWS-wide initiatives like regular availability risk review.
+	 	\item Lead API Gateway's technical strategy in new initiates to support gRPC protocol, private connectivity to APIs, improve rate limiting customer experience for API Gateway's customer (Limitless).
+	 	\item Led effort to deliver complex customer impacting features for API Gateway like Mutual TLS (\changeurlcolor{blue}\href{https://aws.amazon.com/blogs/compute/introducing-mutual-tls-authentication-for-amazon-api-gateway/}{official blog post}). Built consensus on approach with AWS-wide stakeholders, designed and led the core development team. Efforts led to the successful delivery of the critical requested feature for enterprise customers.\
+	 	\item Drive API Gateway's architectural vision to separate frontend layer into a separate layer and led the effort to build the initial version. Built consensus on approach with cross-team stakeholders, developed and delivered a Rust based frontend layer for API Gateway that handles an initial set of usecases with a vision to solve future product usecases.
+	 	\item Led API Gateway's engineering effort to evaluate the next gen data plane technology. This resulted in the new platform that powers the HTTP API platform (\changeurlcolor{blue}\href{https://aws.amazon.com/blogs/compute/announcing-http-apis-for-amazon-api-gateway/}{official blog post})
+	 	\item Designed and built a custom networking protocol using TUN to eliminate a vertical scaling cliff in API Gateway's internal mechanism to support VPC integration. The mechanism eliminated the scaling issue entirely which resulted in a much simpler architecture.
+		\end{itemize*}
+    \
+    \item
+	\headerrow
+		{\textbf{Amazon Web Services}}
+		{\emph{Seattle, US}}
+    \\
+    \headerrow
+		{\emph{Software Development Engineer II, Amazon API Gateway}}
+		{\emph{Feb 2016 -- March 2019}}
+	 	\begin{itemize*}
+	 	\item Led the effort to build a new stateful data plane to support WebSocket protocol in API Gateway (\changeurlcolor{blue}\href{https://aws.amazon.com/blogs/compute/announcing-websocket-apis-in-amazon-api-gateway/}{official blog post}). Designed and developed the core pieces of data plane while mentoring junior engineers. WebSocket data plane handles some of API Gateway's largest customers.
+        \item Led the effort to deliver Private API for API Gateway (\changeurlcolor{blue}\href{https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endpoints/}{official blog post}). Scoped requirements with Product, designed and developed a new data plane to handle the Private API traffic.
+        \item Helped deliver VPC integration for API Gateway (\changeurlcolor{blue}\href{https://aws.amazon.com/blogs/compute/introducing-amazon-api-gateway-private-endpoints/}{official blog post}). Developed the low level design and delivered feature as part of a team.
+        \item Led the effort to deliver customization of error responses for API Gateway (\changeurlcolor{blue}\href{https://aws.amazon.com/about-aws/whats-new/2017/06/amazon-api-gateway-enables-customization-of-error-responses/}{official blog post}). Scoped the requirements, designed and developed the Gateway Responses feature that helped with customizing errors from API Gateway.
+		\end{itemize*}
+    \item
+	\headerrow
+		{\textbf{Amazon}}
+		{\emph{Bangalore, India}}
+    \\
+    \headerrow
+		{\emph{Software Development Engineer II, Product Aggregator}}
+		{\emph{Sept 2015 -- Jan 2016}}
+	 	\begin{itemize*}
+	 	\item Led effort for utilization improvements on a high throughput web service that's on the critical path for all product page loads. Re-architected the caching mechanism which resulted is significant capex savings for the service.
+		\end{itemize*}
+		
+    \item
+	\headerrow
+		{\textbf{Amazon}}
+		{\emph{Bangalore, India}}
+    \\
+    \headerrow
+		{\emph{Software Developer Engineer I, Product Aggregator}}
+		{\emph{April 2013 -- Aug 2015}}
+	 	\begin{itemize*}
+	 	\item Developed an internal web portal to help analyse traffic patterns from hundreds of internal callers. Its used by the team during operational events to look at traffic patterns.
+        \\
+    	{\textbf{Tools and Technologies:} { Java, Perl, Python}}
+		\end{itemize*}
+	 
+	 	\item
+	\headerrow
+		{\textbf{Akamai}}
+		{\emph{Bengalore, India}}
+    \\
+    \headerrow
+		{\emph{Associate Solutions Architect, APAC}}
+		{\emph{July 2012 -- April 2013}}
+	  \begin{itemize*}
+	 	\item Delivered integration solutions for Akamai customers by evaluating the web architecture, security requirements, DNS configuration that satisfies the customer's business and technical requirements.
+		\end{itemize*}
+\end{itemize}
+\vspace{3pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%---EDUCATION---%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hrule
+%\vspace{1pt}
+\subsection*{\uppercase{Education}}
+\vspace{-3pt}
+\begin{itemize}
+	\parskip=0.1em
+    \item 
+	\headerrow
+		{\href{http://www.msrit.edu/}{\textbf{Ramaiah Institute of Technology}}}
+		{\emph{Bengaluru, India}}
+	\\
+	\headerrow
+		{\emph{B.E., Information Science and Engineering} \hspace{20 mm} \textbf{GPA - 9.28 / 10}} 
+		{\emph{2008 - 2012}}
+\end{itemize}
+\vspace{3pt}
+
+
+\end{document}
